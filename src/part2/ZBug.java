@@ -24,28 +24,66 @@ public class ZBug extends Bug {
 	 */
 	public void act() {
 		
+		boolean done = false;
+		boolean secondPhase = false;
+		boolean thirdPhase = false;
 		
-		
-		if (steps < sideLength && canMove()) {			
+		if (steps < sideLength && canMove() && !done && !secondPhase)  {			
 			move();
 			steps++;
 			
 		} else {
-			turn();
-			turn();
-			turn();
+			if (!secondPhase){
+				turnRight();
+				turn();
+				secondPhase = true;
+				steps = 0;
+			}
 			
-			steps = 100;
+				
 			
-			turn();
-			turn();
-			turn();
-			turn();
-			turn();
-			steps=0;
+			
+		}
+		
+		
+		
+		if (steps< sideLength && canMove() && !done && secondPhase){
+			
+			move();
+			steps++;
+			
+		}else{
+			if(secondPhase){
+				turnRight();
+				turnRight();
+				turn();
+				thirdPhase = true;
+				steps = 0;
+				
+			}
+		}
+		if (steps< sideLength && canMove() && !done && thirdPhase){
+			move();
+			steps++;
+		}else{
+			done = true;
 		}
 	}
 	
+	private void turnRight(){
+		turn();
+		turn();
+	}
+	
+	private void turnLeft(){
+		turn();
+		turn();
+		turn();
+		turn();
+		turn();
+		turn();
+	}
+
 	
 	
 
