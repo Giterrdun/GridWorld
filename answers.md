@@ -1,3 +1,5 @@
+Part 1
+-------------------------------------------------
 1. no sometimes it takes a step to switch directions.
 2.the bug's north
 3. it turns.
@@ -25,4 +27,27 @@ Exercises
 
 3.void setColor(java.awt.Color)
 
-4.
+4.The bug is gone
+
+Part 2
+------------------------------------------------
+1. The role of the variable is say how many  steps the box bug will take.
+
+2.The role of the instance variable steps is to count how many steps the bug has taken.
+
+3. To turn 90degrees.
+
+4.Because the BoxBug class is a child of the Bug class where it does have a move method.
+
+5.No, because you set the length.
+
+6.No, because there is only one direction to turn.
+
+7.After the box bug turns.
+
+
+1. The CircleBug instead of making 90 degree turns makes 45 degree turns.
+
+2.
+
+
