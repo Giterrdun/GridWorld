@@ -7,6 +7,9 @@ public class ZBug extends Bug {
 
 	private int steps;
 	private int sideLength;
+	private int stroke;
+	
+	
 
 	/**
 	 * Constructs a box bug that traces a square of a given side length
@@ -17,6 +20,8 @@ public class ZBug extends Bug {
 	public ZBug(int length) {
 		steps = 0;
 		sideLength = length;
+		stroke = 0;
+		
 	}
 
 	/**
@@ -24,50 +29,25 @@ public class ZBug extends Bug {
 	 */
 	public void act() {
 		
-		boolean done = false;
-		boolean secondPhase = false;
-		boolean thirdPhase = false;
 		
-		if (steps < sideLength && canMove() && !done && !secondPhase)  {			
+		
+		if (steps < sideLength && canMove()){
 			move();
-			steps++;
-			
-		} else {
-			if (!secondPhase){
-				turnRight();
-				turn();
-				secondPhase = true;
-				steps = 0;
-			}
-			
-				
-			
-			
-		}
-		
-		
-		
-		if (steps< sideLength && canMove() && !done && secondPhase){
-			
-			move();
-			steps++;
-			
-		}else{
-			if(secondPhase){
+			steps++;				
+		} else if (stroke == 0){
+			turnRight();
+			turn();
+			steps = 0;
+			stroke++;
+		} else if (stroke == 1) {
 				turnRight();
 				turnRight();
 				turn();
-				thirdPhase = true;
 				steps = 0;
-				
-			}
+				stroke++;
+			
 		}
-		if (steps< sideLength && canMove() && !done && thirdPhase){
-			move();
-			steps++;
-		}else{
-			done = true;
-		}
+		
 	}
 	
 	private void turnRight(){
@@ -76,17 +56,13 @@ public class ZBug extends Bug {
 	}
 	
 	private void turnLeft(){
-		turn();
-		turn();
-		turn();
-		turn();
-		turn();
-		turn();
+		turnRight();
+		turnRight();
+		turnRight();
 	}
 
 	
 	
-
 
 
 }
