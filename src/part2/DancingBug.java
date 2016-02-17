@@ -23,9 +23,13 @@ public class DancingBug extends Bug {
 	 */
 	public void act() {
 		
-		for(int x : turnArray){
-			turn(x);
+		for (int i = 0; i < turnArray.length; i++){
+			while (turnArray[i] > 0){
+				turn();
+				turnArray[i] = turnArray[i] - 1;
+			}
 			move();
+		}
 }
-}
+	
 }
