@@ -48,6 +48,6 @@ Part 2
 
 1. The CircleBug instead of making 90 degree turns makes 45 degree turns.
 
-2.
+5. to add another boxBug actor to the grid I would need to create a new box bug object and reference it. Then place it into the grid.
 
 
