@@ -1,5 +1,5 @@
 Part 1
--------------------------------------------------
+----------------------------------------------
 1. no sometimes it takes a step to switch directions.
 2.the bug's north
 3. it turns.
@@ -49,5 +49,24 @@ Part 2
 1. The CircleBug instead of making 90 degree turns makes 45 degree turns.
 
 5. to add another boxBug actor to the grid I would need to create a new box bug object and reference it. Then place it into the grid.
+
+Part 3
+----------------------------------------------
+1.
+a)It will jump next step.
+b)move then turn right.
+c)turn right.
+d)move and remove the other bug.
+e)move and remove the jumper.
+f)Test if a rock or flower is diagonal to it.
+2.
+a)extends Bug class.
+b)similar to the boxBug in which is goes a certain length.
+c) No we are not passing it anything, the move twice feature can be implemented inside the JumperBug class.
+d)Act method
+e)canJump
+f)Making a runner wit rocks or flowers in its path.
+3.
+
 
 
