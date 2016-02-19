@@ -7,7 +7,7 @@ import info.gridworld.grid.Location;
 
 public class DancingBugRunner {
 	public static void main(String[] args) {
-		int[] turns = {1, 5, 3};
+		int[] turns = {1, 2, 8};
 		ActorWorld world = new ActorWorld();
 		DancingBug alice = new DancingBug(turns);
 		alice.setColor(Color.ORANGE);

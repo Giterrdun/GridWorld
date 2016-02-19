@@ -17,19 +17,25 @@ public class DancingBug extends Bug {
 		turnArray = turn;
 		
 	}
+	
+	public void turn(int n){
+		turns = 0;
+		while(turns < n){
+			turn();
+			turns++;
+		}
+	}
 
 	/**
 	 * Moves to the next location of the square.
 	 */
 	public void act() {
-		
-		for (int i = 0; i < turnArray.length; i++){
-			while (turnArray[i] > 0){
-				turn();
-				turnArray[i] = turnArray[i] - 1;
-			}
+		for (int x : turnArray){			
+			turn(x);
 			move();
+			
 		}
+		
 }
 	
 }
