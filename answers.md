@@ -67,7 +67,9 @@ Do You Know?
 
 1.Color,position,direction
 2.0(North),color of the actor
-3.
+3.Because Actors needed to be more that just a reference type.
+4.No,No,NO, the actor is gone and can't place itself in.
+5. Turn twice or set direction to 90 more than where it is at.
 
 1.
 a)It will jump next step.
