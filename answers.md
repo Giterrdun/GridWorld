@@ -52,6 +52,23 @@ Part 2
 
 Part 3
 ----------------------------------------------
+Do You Know?
+
+1.loc1.getRow();
+2.false
+3.(4,4)
+4.135
+5.It uses the direction you give it.
+
+1.getNieghbors();getEMptyAdjacentLocations();
+2.isValid(Location (10,10));
+3.The implementation of these methods might be found in child classes of Grid.
+4.No, because Arrays have a fixed length and there could be a lot of objects.
+
+1.Color,position,direction
+2.0(North),color of the actor
+3.
+
 1.
 a)It will jump next step.
 b)move then turn right.
