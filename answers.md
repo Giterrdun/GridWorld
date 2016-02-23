@@ -103,4 +103,10 @@ f)Making a runner wit rocks or flowers in its path.
 3.
 
 
+Part 4
+----------------------------------------------
+1.act(),getActors(),processActors(),getMoveLocations(),selectMoveLocation,makeMove()
+2.
+
+
 
