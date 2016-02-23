@@ -71,6 +71,21 @@ Do You Know?
 4.No,No,NO, the actor is gone and can't place itself in.
 5. Turn twice or set direction to 90 more than where it is at.
 
+1.if (gr ==null) return false;
+2.return (neighbor ==null) || (neighbor instanceof Flower) ;
+3.isValid() to know if the actor is within the grid.
+4.getAdjacentLocation() to know the actors adjacent location.
+5.getGrid(),getLocation(),getDirection(), to know the position and direction of the actor.
+6.A turn 90 degree method is used instead.
+7.yes because it is used to find the next location.
+8.Because the dropping flower method, although it is used the same by every bug, is an action done by that certain bug.
+9.No 
+10.Flower flower = new Flower(getColor());
+flower.putSelfInGrid(gr, loc);
+11.6
+
+Group Activity
+
 1.
 a)It will jump next step.
 b)move then turn right.

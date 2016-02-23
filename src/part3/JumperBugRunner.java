@@ -15,7 +15,8 @@ public class JumperBugRunner {
 		
 		JumperBug alice = new JumperBug();
 		alice.setColor(Color.ORANGE);
-		world.add(new Rock());
+		Rock rocky = new Rock();
+		world.add(new Location(3,8), rocky);
 		world.add(new Location(7, 8), alice);
 		
 		world.show();
