@@ -82,7 +82,7 @@ Do You Know?
 9.No 
 10.Flower flower = new Flower(getColor());
 flower.putSelfInGrid(gr, loc);
-11.6
+11.4
 
 Group Activity
 
@@ -106,7 +106,26 @@ f)Making a runner wit rocks or flowers in its path.
 Part 4
 ----------------------------------------------
 1.act(),getActors(),processActors(),getMoveLocations(),selectMoveLocation,makeMove()
-2.
+2.act, getActors, processActors,getMoveLocations,SelectMoveLocations, makeMove
+3.yes It needs to overide to be able to do its own thing.
+4.It could eat, change color, or make it move.
+5.getMoveLocations, gets a list of empty adjacent locations to the critter; selectMoveLocation,randomly chooses one of these locations;makeMove,moves to that location.
+6.Because critter extend actor and by default it uses its constructor.
+
+1.Because it does overrids the processActors and makeMove methods which get called by the act method.
+2.Because it first changes the direction of the critter and then calls super.makeMove to run the method normally.
+3.Keep track of its current location and then when it makeMove drop a flower.
+4.because ChameloneCritter does not overide it.
+5.The Actor class
+6.getGrid method.
+
+1.It does not need to override it.
+2.It eats neighboring actors that are infront, to its right, and left.
+3.to return valid adjacent locations.
+4.(4,4),(4,3),(4,5)
+5.they both do not turn in the direction they are moving to. A crabcritter only moves to its left or its right.
+6.if loc in makeMove is its current location.
+7.Because critters don't eat each other.
 
 
 
