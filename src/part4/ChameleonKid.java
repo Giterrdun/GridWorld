@@ -11,27 +11,27 @@ import java.awt.Color;
 
 public class ChameleonKid extends ChameleonCritter {
 
-	public ArrayList<Actor> getActors(){
+	public ArrayList<Actor> getActors() {
 		ArrayList<Actor> actors = new ArrayList<Actor>();
-		int[] directions = { Location.AHEAD, Location.HALF_CIRCLE };
-		for (Location loc : getLocationsInDirections(directions)){
-			Actor jeff = getGrid().get(loc);
-			if (jeff != null)
-				actors.add(jeff);
+		int[] dirs = { 0, 180};
+		for (Location loc : getLocationsInDirections(dirs)) {
+			Actor a = getGrid().get(loc);
+			if (a != null)
+				actors.add(a);
 		}
+
 		return actors;
 	}
-	
-	public ArrayList<Location> getLocationsInDirections(int[] directions){
+	public ArrayList<Location> getLocationsInDirections(int[] directions) {
 		ArrayList<Location> locs = new ArrayList<Location>();
-		Grid grd = getGrid();
+		Grid gr = getGrid();
 		Location loc = getLocation();
-		
-		for (int direction : directions){
-			Location neighborLoc = loc.getAdjacentLocation(getDirection() + direction);
-			if (grd.isValid(neighborLoc))
+
+		for (int d : directions) {
+			Location neighborLoc = loc.getAdjacentLocation(getDirection() + d);
+			if (gr.isValid(neighborLoc))
 				locs.add(neighborLoc);
-			}
+		}
 		return locs;
 	}
 
